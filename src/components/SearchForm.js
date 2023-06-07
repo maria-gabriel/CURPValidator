@@ -34,7 +34,7 @@ export class SearchForm extends Component {
   render() {
     return (
       <>
-        <div className="field is-grouped column is-two-fifths">
+        <div className="field is-grouped column is-two-fifths p-0 pb-3">
           <div className="control is-expanded">
             <textarea className="textarea is-primary" value={this.state.inputValue} onChange={this._handleChange} placeholder="Ingrese CURP"></textarea>
           </div>
