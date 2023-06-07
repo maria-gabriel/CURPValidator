@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -20,19 +9,42 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 14px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.control-contents{
+  display: contents;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.has-buttons{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+  .App-header {
+    justify-content: flex-start!important;
+    padding: 20px;
+    align-items: inherit!important;
   }
-  to {
-    transform: rotate(360deg);
+  .image{
+    align-self: center;
+  }
+  .field.is-grouped{
+    flex-direction: column;
+  }
+  .field.is-grouped > .control:not(:last-child){
+    margin-right: 0px!important;
+  }
+  .field:not(:last-child){
+    margin-bottom: 0px!important;
+  }
+  .column{
+    flex-grow: inherit!important;
+  }
+  .has-buttons .button{
+    margin-top: 5px!important;
   }
 }
